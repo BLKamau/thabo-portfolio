@@ -1,0 +1,121 @@
+.section {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+.metaRow {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-sm);
+}
+
+.dispatchLabel {
+  color: var(--text-muted);
+}
+
+.readTime {
+  color: var(--text-faint);
+}
+
+.headline {
+  font-size: clamp(1.9rem, 3.4vw, 2.75rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin-bottom: var(--space-sm);
+}
+
+.deck {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  font-style: italic;
+  max-width: 640px;
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.essay {
+  font-size: 0.92rem;
+}
+
+.paragraph {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-md);
+}
+
+.pullQuote {
+  margin: var(--space-lg) 0;
+  padding: var(--space-sm) var(--space-md);
+  border-left: 2px solid var(--accent-solid);
+  background: var(--surface-module);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+}
+
+.signature {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-top: var(--space-md);
+}
+
+.locationRow {
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  color: var(--border-hairline-strong);
+}
+
+.continueLink {
+  display: inline-block;
+  margin-top: var(--space-md);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent-dim);
+}
+
+.continueLink:hover {
+  border-bottom-color: var(--accent);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .sidebar {
+    gap: var(--space-md);
+  }
+}

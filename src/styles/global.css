@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap");
+@import "./tokens.css";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--surface-void);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--accent-solid);
+  color: #fff5ef;
+}
+
+/* visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.container {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--gutter-desktop);
+}
+
+.mono-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.hairline {
+  border: none;
+  border-top: 1px solid var(--border-hairline);
+  margin: 0;
+}
+
+/* Drop cap for the lead essay's opening paragraph */
+.drop-cap::first-letter {
+  font-family: var(--font-display);
+  font-size: 3.4em;
+  line-height: 0.8;
+  float: left;
+  padding-right: 0.08em;
+  padding-top: 0.05em;
+  color: var(--accent);
+}
+
+/* Two-column newspaper-style text flow for wider paragraphs */
+.text-columns {
+  column-count: 2;
+  column-gap: var(--space-xl);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .text-columns {
+    column-count: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 var(--space-sm);
+  }
+}

@@ -1,0 +1,79 @@
+.author {
+  background: var(--surface-module);
+  border: 1px solid var(--border-hairline-strong);
+  padding: var(--space-sm) var(--space-md);
+}
+
+.authorLabel {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  color: var(--text-faint);
+  margin-bottom: var(--space-sm);
+}
+
+.authorCard {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.authorPhoto {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border-hairline-strong);
+  flex-shrink: 0;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.author:hover .authorPhoto {
+  border-color: var(--accent);
+  box-shadow: 0 0 14px rgba(234, 88, 12, 0.18);
+}
+
+.authorInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.authorName {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+  margin: 0;
+}
+
+.author:hover .authorName {
+  color: var(--accent);
+  text-shadow: 0 0 10px rgba(234, 88, 12, 0.25);
+}
+
+.authorRole,
+.authorDegree {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.authorDegree {
+  font-style: italic;
+}
+
+.authorPhone {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent);
+  text-decoration: none;
+  margin: 0;
+  transition: color 0.2s ease;
+}
+
+.authorPhone:hover {
+  color: var(--accent-solid-hover);
+}

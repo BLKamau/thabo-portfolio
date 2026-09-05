@@ -1,0 +1,45 @@
+.row {
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.labelRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.label {
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.level {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  color: var(--accent);
+}
+
+.detail {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--text-faint);
+  margin-top: 1px;
+}
+
+.track {
+  margin-top: var(--space-xxs);
+  height: 2px;
+  width: 100%;
+  background: var(--surface-elevated);
+}
+
+.fill {
+  height: 100%;
+  background: var(--accent-solid);
+}

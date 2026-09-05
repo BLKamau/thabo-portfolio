@@ -1,0 +1,53 @@
+.panel {
+  background: var(--surface-module);
+  border: 1px solid var(--border-hairline-strong);
+  padding: var(--space-sm) var(--space-md);
+  height: fit-content;
+}
+
+.group {
+  margin-top: var(--space-sm);
+}
+
+.groupTitle {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  color: var(--text-faint);
+  margin-bottom: 2px;
+}
+
+.statusWidget {
+  margin-top: var(--space-md);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--border-hairline);
+}
+
+.statusRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-xs);
+}
+
+.statusLabel {
+  color: var(--text-muted);
+}
+
+.statusValue {
+  color: var(--accent);
+}
+
+.capacityTrack {
+  height: 3px;
+  width: 100%;
+  background: var(--surface-elevated);
+}
+
+.capacityFill {
+  height: 100%;
+  background: var(--accent-solid);
+}

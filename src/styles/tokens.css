@@ -1,0 +1,51 @@
+/*
+  Design tokens — matches the reference HTML's palette and spacing scale.
+  Change a value here and it updates everywhere it's used.
+*/
+
+:root {
+  /* Surfaces */
+  --surface-void: #0c0d0e;
+  --surface-module: #121316;
+  --surface-elevated: #1b1c1e;
+  --surface-hover: #202225;
+
+  /* Borders */
+  --border-hairline: #1f2023;
+  --border-hairline-strong: #27272a;
+
+  /* Text */
+  --text-primary: #f3f4f6;
+  --text-secondary: #e5e7eb;
+  --text-muted: #9ca3af;
+  --text-faint: #4b5563;
+
+  /* The single accent: peach-orange. Text tint + hairline highlights use
+     the light peach; solid buttons/fills use the deeper orange. */
+  --accent: #ffb599;
+  --accent-solid: #ea580c;
+  --accent-solid-hover: #f59e0b;
+  --accent-dim: #7f2b00;
+  --accent-on-solid: #1c0800;
+
+  /* Type */
+  --font-display: "Newsreader", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", monospace;
+
+  /* Spacing scale — kept tight and dense, matching the source dossier */
+  --space-xxs: 0.125rem;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4.5rem;
+
+  --gutter-desktop: 1.5rem;
+  --margin-desktop: 3rem;
+
+  --content-max: 1280px;
+  --radius: 0px;
+}
