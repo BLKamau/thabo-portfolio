@@ -3,8 +3,8 @@ import styles from "./AuthorProfile.module.css";
 
 export default function AuthorProfile() {
   return (
-    <aside className={styles.author} aria-label="About the author">
-      <p className={styles.authorLabel}>ABOUT THE AUTHOR</p>
+    <aside className={styles.author} aria-labelledby="author-heading">
+      <p id="author-heading" className={styles.authorLabel}>ABOUT THE AUTHOR</p>
       <div className={styles.authorCard}>
         <img
           className={styles.authorPhoto}

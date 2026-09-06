@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { profile } from "../data/profile";
+import { track } from "../analytics";
 import styles from "./Masthead.module.css";
 
 const NAV_LINKS = [
@@ -8,6 +9,10 @@ const NAV_LINKS = [
   { label: "Case Studies", href: "#case-studies" },
   { label: "Transmit", href: "#contact" },
 ];
+
+function trackNav(label, href) {
+  track("nav_click", { label, href, location: "masthead" });
+}
 
 function useClock() {
   const [time, setTime] = useState(() => formatTime());
@@ -63,12 +68,16 @@ export default function Masthead() {
       <div className={`${styles.titleRow} container`}>
         <div>
           <p className={styles.eyebrow}>{profile.role.toUpperCase()}</p>
-          <h1 className={styles.title}>{profile.masthead}</h1>
+          <p className={styles.title}>{profile.masthead}</p>
           <p className={styles.deck}>
             Personal dossier of <strong>{profile.name}</strong>
           </p>
         </div>
-        <a className={styles.cta} href="#contact">
+        <a
+          className={styles.cta}
+          href="#contact"
+          onClick={() => trackNav("Transmit CTA", "#contact")}
+        >
           Transmit Inquiry
         </a>
       </div>
@@ -77,7 +86,12 @@ export default function Masthead() {
 
       <nav className={`${styles.nav} container`} aria-label="Primary">
         {NAV_LINKS.map((link) => (
-          <a key={link.href} href={link.href} className={styles.navLink}>
+          <a
+            key={link.href}
+            href={link.href}
+            className={styles.navLink}
+            onClick={() => trackNav(link.label, link.href)}
+          >
             {link.label}
           </a>
         ))}

@@ -21,6 +21,10 @@ export default function CaseStudyDrawer({ study, onClose }) {
     <div
       className={`${styles.container} ${isOpen ? styles.open : ""}`}
       aria-hidden={!isOpen}
+      aria-expanded={isOpen}
+      role="dialog"
+      aria-modal={isOpen}
+      aria-label={isOpen ? study?.title : "Dossier drawer"}
     >
       <div className={styles.backdrop} onClick={onClose} />
       <div className={`${styles.panel} ${isOpen ? styles.panelOpen : ""}`}>
@@ -70,7 +74,7 @@ export default function CaseStudyDrawer({ study, onClose }) {
               </div>
             </div>
 
-            <button type="button" className={styles.closeBottom} onClick={onClose}>
+            <button type="button" className={styles.closeBottom} onClick={onClose} aria-label="Close dossier">
               Close Dossier
             </button>
           </>

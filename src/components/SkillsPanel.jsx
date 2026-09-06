@@ -15,8 +15,8 @@ function SkillGroup({ title, skills }) {
 
 export default function SkillsPanel() {
   return (
-    <aside id="skills" className={styles.panel} aria-label="Field specifications">
-      <p className="mono-label">FIELD SPECIFICATIONS // SPEC. 01-A</p>
+    <aside id="skills" className={styles.panel} aria-labelledby="skills-heading">
+      <p id="skills-heading" className="mono-label">FIELD SPECIFICATIONS // SPEC. 01-A</p>
       <SkillGroup title="SOFTWARE" skills={softwareSkills} />
       <SkillGroup title="HARDWARE" skills={hardwareSkills} />
 
