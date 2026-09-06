@@ -1,0 +1,22 @@
+{
+  "name": "The Systems Dispatch",
+  "short_name": "Systems Dispatch",
+  "description": "Portfolio of Thabo Mantsima — mechatronics engineer and backend developer.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0c0d0e",
+  "theme_color": "#0c0d0e",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/site-icon-16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/profile-200.jpg",
+      "sizes": "200x200",
+      "type": "image/jpeg"
+    }
+  ]
+}

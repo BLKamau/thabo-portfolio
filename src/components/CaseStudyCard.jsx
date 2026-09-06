@@ -2,7 +2,7 @@ import styles from "./CaseStudyCard.module.css";
 
 export default function CaseStudyCard({ study, onOpen }) {
   return (
-    <article className={styles.card}>
+    <article className={styles.card} role="listitem">
       <div className={styles.head}>
         <span className={styles.number}>DISPATCH {study.number}</span>
         <span className={styles.tag}>{study.tag}</span>
@@ -16,7 +16,7 @@ export default function CaseStudyCard({ study, onOpen }) {
           </span>
         ))}
       </div>
-      <button type="button" className={styles.inspect} onClick={onOpen}>
+      <button type="button" className={styles.inspect} onClick={onOpen} aria-label={`Inspect ${study.title} dossier`}>
         Inspect Dossier &rarr;
       </button>
     </article>

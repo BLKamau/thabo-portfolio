@@ -8,7 +8,7 @@ export const profile = {
   volumeLine: "VOL. I NO. 1 // MECHATRONICS & SOFTWARE ARCHIVE",
   role: "Mechatronics Engineer & Backend Developer",
   degree: "BEng Mechatronics & Industrial Instrumentation",
-  phone: "+267 72 470 427",
+  phone: "+267 ...",
   location: "Gaborone, Botswana",
   timezone: "CAT / UTC+2",
   availability: "AVAILABLE FOR FREELANCE",
